@@ -15,15 +15,15 @@ DATASET: #DATASET field
     test_num_workers: 0
     train:
         format: "SkeletonDataset" #Mandatory, indicate the type of dataset, associate to the 'paddlevidel/loader/dateset'
-        file_path: "/home/aistudio/work/dataset/train/JB_fold1.npy" #Mandatory, train data index file path
-        label_path: "/home/aistudio/work/dataset/train/fold1_label.npy"
+        file_path: "../dataset/train/JB_fold1.npy" #Mandatory, train data index file path
+        label_path: "../dataset/train/fold1_label.npy"
     valid:
         format: "SkeletonDataset" #Mandatory, indicate the type of dataset, associate to the 'paddlevidel/loader/dateset'
-        file_path: "/home/aistudio/work/dataset/valid/JB_fold1.npy" #Mandatory, train data index file path
-        label_path: "/home/aistudio/work/dataset/valid/fold1_label.npy"
+        file_path: "../dataset/valid/JB_fold1.npy" #Mandatory, train data index file path
+        label_path: "../dataset/valid/fold1_label.npy"
     test:
         format: "SkeletonDataset" #Mandatory, indicate the type of dataset, associate to the 'paddlevidel/loader/dateset'
-        file_path: "/home/aistudio/work/dataset/test/JB.npy" #Mandatory, valid data index file path
+        file_path: "../dataset/test/JB.npy" #Mandatory, valid data index file path
         test_mode: True
 
 PIPELINE: #PIPELINE field
