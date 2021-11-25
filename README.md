@@ -9,6 +9,53 @@
   <br>图1 算法流程</br>
 </div>
 
+## 目录结构
+
+```text
+├── aistudio_project.ipynb
+├── data
+│   ├── test_A_data.npy
+│   ├── test_B_data.npy
+│   ├── train_data.npy
+│   └── train_label.npy
+└── work
+    ├── dataset
+    │   ├── generate_feature.py
+    │   ├── generate_index.py
+    │   └── index
+    ├── doc
+    └── PaddleVideo
+        ├── configs
+        ├── ensemble.py
+        ├── LICENSE
+        ├── logits
+        ├── main.py
+        ├── model_ours
+        ├── paddlevideo
+        ├── README_cn.md
+        ├── README.md
+        ├── requirements.txt
+        ├── run_test.sh
+        └── run_train.sh
+```
+
+## 目录与文件描述
+
+|目录/文件名|描述|
+|---|---|
+|aistudio_project.ipynb|AIStudio 项目的Notebook，包含项目介绍与运行方式|
+|data|data目录用于存放数据集，需自行下载数据后按目录结构进行组织|
+|work/dataset/generate_feature.py| 数据预处理脚本，用于特征抽取 |
+|work/dataset/generate_index.py| 数据预处理脚本，用于划分验证集|
+|work/dataset/index|该目录下存储指示验证集的划分方式的npy文件|
+|work/PaddleVideo/configs| 该目录下存储模型的yaml配置文件|
+|work/PaddleVideo/ensenmble.py|融合模型预测结果的脚本|
+|work/PaddleVideo/logits|该目录用于存放模型的预测结果|
+|work/PaddleVideo/model_ours|该目录下存放训练完毕的模型，用于复现B榜成绩|
+|work/PaddleVideo/requirements.txt|依赖配置文件|
+|work/PaddleVideo/run_test.sh|模型预测脚本，用于复现B榜成绩|
+|work/PaddleVideo/run_train.sh|模型训练脚本|
+
 ## 环境配置
 ```bash
 cd ~/work/PaddleVideo/
@@ -101,51 +148,4 @@ python3.7 main.py --test -c $PATH_TO_YOUR_CONFIGURATIOM_YAML -w $PAHT_TO_YOUR_PD
 cd ~/work/PaddleVideo/
 sh run_test.sh
 ```
-
-## 目录结构
-
-```text
-├── aistudio_project.ipynb
-├── data
-│   ├── test_A_data.npy
-│   ├── test_B_data.npy
-│   ├── train_data.npy
-│   └── train_label.npy
-└── work
-    ├── dataset
-    │   ├── generate_feature.py
-    │   ├── generate_index.py
-    │   └── index
-    ├── doc
-    └── PaddleVideo
-        ├── configs
-        ├── ensemble.py
-        ├── LICENSE
-        ├── logits
-        ├── main.py
-        ├── model_ours
-        ├── paddlevideo
-        ├── README_cn.md
-        ├── README.md
-        ├── requirements.txt
-        ├── run_test.sh
-        └── run_train.sh
-```
-
-## 目录与文件描述
-
-|目录/文件名|描述|
-|---|---|
-|aistudio_project.ipynb|AIStudio 项目的Notebook，包含项目介绍与运行方式|
-|data|data目录用于存放数据集，需自行下载数据后按目录结构进行组织|
-|work/dataset/generate_feature.py| 数据预处理脚本，用于特征抽取 |
-|work/dataset/generate_index.py| 数据预处理脚本，用于划分验证集|
-|work/dataset/index|该目录下存储指示验证集的划分方式的npy文件|
-|work/PaddleVideo/configs| 该目录下存储模型的yaml配置文件|
-|work/PaddleVideo/ensenmble.py|融合模型预测结果的脚本|
-|work/PaddleVideo/logits|该目录用于存放模型的预测结果|
-|work/PaddleVideo/model_ours|该目录下存放训练完毕的模型，用于复现B榜成绩|
-|work/PaddleVideo/requirements.txt|依赖配置文件|
-|work/PaddleVideo/run_test.sh|模型预测脚本，用于复现B榜成绩|
-|work/PaddleVideo/run_train.sh|模型训练脚本|
 
